@@ -51,25 +51,24 @@ function CV() {
         )}
         
         {showFull && (
-            <div className="fixed inset-0 bg-gray-100 overflow-auto flex justify-center items-start py-12">
-                <div className="bg-white p-4 rounded relative">
-                    <button className="absolute top-6 right-4 transform transition-transform hover:scale-125 z-50" onClick={() => setShowFull(false)}>
+            <div className="fixed inset-0 bg-gray-100 overflow-auto flex justify-center items-start py-12 " style={{ backgroundColor: '#0a1f44' }}>
+                <div className="p-4 rounded relative">
+                    <button className="absolute top-7 right-6 text-black transform transition-transform hover:scale-125 z-50" onClick={() => setShowFull(false)}>
                         <RxCross1 />
                         </button>
-                        
 
 
                     <Document file='/CV.pdf' onLoadSuccess={onDocumentLoaded} >
-                        <Page pageNumber={pageNumber} width={600} />
+                        <Page pageNumber={pageNumber} width={650} />
                     </Document>
 
 
                     <button onClick={prevPage}
-                            className="absolute left-2 top-1/2 transform transition-transform hover:scale-150 z-50" >
+                            className="absolute left-6 top-1/2 text-black transform transition-transform hover:scale-150 z-50" >
                             <FaArrowLeft />
                         </button>
                     <button onClick={nextPage} 
-                            className="absolute right-2 top-1/2 transform transition-transform hover:scale-150 z-50">
+                            className="absolute right-6 top-1/2 transform text-black transition-transform hover:scale-150 z-50">
                            <FaArrowRight />
                         </button>
                     </div>

@@ -14,15 +14,17 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function App() {
   return (
+    
     <div className="flex min-h-screen">
       <div className="hidden md:block">
         <Sidebar />
       </div>
-      <main className="flex-1">
+      
+      <main className="flex-1 text-yellow-100" style={{ backgroundColor: '#0a1f44' }}>
         <div className="md:hidden">
           <Header />
         </div>
-        <section id="about" className="min-h-screen flex items-center bg-white">
+        <section id="about" className="min-h-screen flex items-center bg-sand">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 w-full">
             <div className="flex items-center">
               <About />
@@ -32,10 +34,10 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="projects" className="min-h-screen flex items-center bg-white">
+        <section id="projects" className="min-h-screen flex items-center ">
           <Projects />
         </section>
-        <section id="contact" className="min-h-screen flex items-center bg-gray-50">
+        <section id="contact" className="min-h-screen flex items-center ">
           <Contact />
         </section>
       </main>
