@@ -7,7 +7,6 @@ function Header() {
         <h1 className="text-x1 font-bold">Lukas Rosendahl</h1>
         <div className="flex gap-6">
         <a href="#about">Om Mig</a> 
-        <a href="#cv">CV</a>
         <a href="#projects">Projekt</a>
         <a href="#contact">Kontakt</a>
         </div>

@@ -5,6 +5,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import CV from './components/CV';
 import { pdfjs } from 'react-pdf';
+import Sidebar from './components/Sidebar';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -13,23 +14,32 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function App() {
   return (
-    <>
-      <Header />
-      <main className='flex flex-col gap-1'>
-        <section id='about' className='min-h-screen flex items-center justify-center bg-white'>
-          <About />
+    <div className="flex min-h-screen">
+      <div className="hidden md:block">
+        <Sidebar />
+      </div>
+      <main className="flex-1">
+        <div className="md:hidden">
+          <Header />
+        </div>
+        <section id="about" className="min-h-screen flex items-center bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 w-full">
+            <div className="flex items-center">
+              <About />
+            </div>
+            <div className="flex items-center justify-center">
+              <CV />
+            </div>
+          </div>
         </section>
-        <section id='cv' className='min-h-screen flex items-center justify-center bg-gray-50'>
-          <CV/>
-        </section>
-        <section id='projects' className="min-h-screen flex items-center justify-center bg-white">
+        <section id="projects" className="min-h-screen flex items-center bg-white">
           <Projects />
         </section>
-        <section id='contact' className="min-h-screen flex items-center justify-center bg-gray-50">
+        <section id="contact" className="min-h-screen flex items-center bg-gray-50">
           <Contact />
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
