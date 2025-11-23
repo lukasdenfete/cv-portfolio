@@ -3,17 +3,17 @@ import { FaPhone, FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa6";
 
 function Sidebar() {
   return (
-    <aside className="w-64 text-gray-800 shadow-lg border-r
-        p-6 flex flex-col justify-between sticky top-0 h-screen" style={{ backgroundColor: '#FFE4B5' }}>
+    <aside className="w-64 shadow-lg border-r
+        p-6 flex flex-col justify-between sticky top-0 h-screen" style={{ backgroundColor: '#F5E6CC', color: '#2F3E46' }}>
       <div>
         <h1 className="text-xl font-bold mb-4">Lukas Rosendahl</h1>
         <p className="text-sm mb-6">
           Systemvetarstudent och fullstackutvecklare med 38 års erfarenhet
         </p>
         <nav className="flex flex-col gap-2">
-          <a href="#about" className="hover:underline">Om mig</a>
-          <a href="#projects" className="hover:underline">Projekt</a>
-          <a href="#contact" className="hover:underline">Kontakt</a>
+          <a href="#about">Om mig</a>
+          <a href="#projects">Projekt</a>
+          <a href="#contact">Kontakt</a>
         </nav>
       </div>
 

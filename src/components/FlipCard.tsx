@@ -1,30 +1,56 @@
-import { cn } from "../lib/utils";
-import { FrontCard } from "./FrontCard";
-import { BackCard } from "./BackCard";
+import { useState } from "react";
 
-type FlipCardProps = {
-  showBack: boolean;
-  flipDirection: "" | "left" | "right";
-};
+interface FlipCardProps {
+  front: React.ReactNode;
+  back: React.ReactNode;
+}
 
-export function FlipCard({ showBack, flipDirection }: FlipCardProps) {
+export default function FlipCard({ front, back }: FlipCardProps) {
+  const [showBack, setShowBack] = useState(false);
+
   return (
-    <div className="w-[600px] h-[800px] outline-none [perspective:50rem] relative">
+    <div
+      onClick={() => setShowBack(prev => !prev)}
+      style={{
+        width: "600px",
+        perspective: "1000px",
+        cursor: "pointer",
+        position: "relative", // 👈 viktigt
+      }}
+    >
       <div
-        className={cn(
-            "relative size-full transition duration-700 [transform-style:preserve-3d]",
-            showBack && "rotate-y-180",
-            flipDirection === "right" && "animate-flip-right",
-            flipDirection === "left" && "animate-flip-left"
-          )}
+        style={{
+          width: "100%",
+          transition: "transform 0.7s",
+          transformStyle: "preserve-3d",
+          transform: showBack ? "rotateY(180deg)" : "rotateY(0deg)",
+          position: "relative",
+        }}
       >
-        <div className="absolute inset-0 size-full [backface-visibility:hidden]">
-          <FrontCard />
+        {/* Front */}
+        <div
+          style={{
+            position: "absolute", // 👈 lägg ovanpå
+            inset: 0,
+            backfaceVisibility: "hidden",
+          }}
+        >
+          {front}
         </div>
-        <div className="absolute inset-0 size-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <BackCard />
+
+        {/* Back */}
+        <div
+          style={{
+            position: "absolute", // 👈 lägg ovanpå
+            inset: 0,
+            transform: "rotateY(180deg)",
+            backfaceVisibility: "hidden",
+          }}
+        >
+          {back}
         </div>
       </div>
     </div>
   );
 }
+

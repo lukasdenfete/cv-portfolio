@@ -20,11 +20,11 @@ function App() {
         <Sidebar />
       </div>
       
-      <main className="flex-1 text-yellow-100" style={{ backgroundColor: '#0a1f44' }}>
+      <main className="flex-1" style={{ backgroundColor: '#A7C7E7', color: '#2F3E46' }} >
         <div className="md:hidden">
           <Header />
         </div>
-        <section id="about" className="min-h-screen flex items-center bg-sand">
+        <section id="about" className="min-h-screen flex items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 w-full">
             <div className="flex items-center">
               <About />
@@ -33,6 +33,9 @@ function App() {
               <CV />
             </div>
           </div>
+        </section>
+        <section>
+          
         </section>
         <section id="projects" className="min-h-screen flex items-center ">
           <Projects />
