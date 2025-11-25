@@ -15,7 +15,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
         width: "600px",
         perspective: "1000px",
         cursor: "pointer",
-        position: "relative", // 👈 viktigt
+        position: "relative",
       }}
     >
       <div
@@ -30,7 +30,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
         {/* Front */}
         <div
           style={{
-            position: "absolute", // 👈 lägg ovanpå
+            position: "absolute", 
             inset: 0,
             backfaceVisibility: "hidden",
           }}
@@ -41,7 +41,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
         {/* Back */}
         <div
           style={{
-            position: "absolute", // 👈 lägg ovanpå
+            position: "absolute", 
             inset: 0,
             transform: "rotateY(180deg)",
             backfaceVisibility: "hidden",

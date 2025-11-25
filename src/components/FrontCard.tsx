@@ -7,7 +7,7 @@ pdfjs.GlobalWorkerOptions.workerSrc =
 
   export default function FrontCard() {
     return (
-      <div className="flex justify-center items-start bg-white">
+      <div className="flex justify-center items-start">
         <Document file="/CV.pdf">
           <Page pageNumber={1} width={600} />
         </Document>

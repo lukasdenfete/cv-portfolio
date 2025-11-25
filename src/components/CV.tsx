@@ -7,7 +7,7 @@ import FrontCard from "../components/FrontCard";
 import BackCard from "../components/BackCard";
 import { RxCross1 } from "react-icons/rx";
 
-// PDF worker
+
 pdfjs.GlobalWorkerOptions.workerSrc =
   `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -49,7 +49,7 @@ export default function CV() {
           </button>
 
           <div className="min-h-screen flex justify-center items-start pt-24 pb-16">
-            <div className="bg-white p-4 rounded">
+            <div className="p-4 rounded">
               <FlipCard front={<FrontCard />} back={<BackCard />} />
             </div>
           </div>
