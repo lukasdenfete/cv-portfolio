@@ -27,7 +27,6 @@ export default function FlipCard({ front, back }: FlipCardProps) {
           position: "relative",
         }}
       >
-        {/* Front */}
         <div
           style={{
             position: "absolute", 
@@ -38,7 +37,6 @@ export default function FlipCard({ front, back }: FlipCardProps) {
           {front}
         </div>
 
-        {/* Back */}
         <div
           style={{
             position: "absolute", 
