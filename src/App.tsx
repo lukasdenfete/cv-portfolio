@@ -20,7 +20,7 @@ function App() {
         <Sidebar />
       </div>
       
-      <main className="flex-1" style={{ backgroundColor: '#A7C7E7', color: '#2F3E46' }} >
+      <main className="flex-1" style={{ backgroundColor: '#FEFEF2', color: '#2F3E46' }} >
         <div className="md:hidden">
           <Header />
         </div>

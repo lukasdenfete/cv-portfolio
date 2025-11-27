@@ -11,9 +11,9 @@ function Sidebar() {
           Systemvetarstudent och fullstackutvecklare med 38 års erfarenhet
         </p>
         <nav className="flex flex-col gap-2">
-          <a href="#about">Om mig</a>
-          <a href="#projects">Projekt</a>
-          <a href="#contact">Kontakt</a>
+          <a href="#about" className="transform transition-transform hover:scale-105">Om mig</a>
+          <a href="#projects" className="transform transition-transform hover:scale-105">Projekt</a>
+          <a href="#contact" className="transform transition-transform hover:scale-105">Kontakt</a>
         </nav>
       </div>
 
