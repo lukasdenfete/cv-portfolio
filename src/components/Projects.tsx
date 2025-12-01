@@ -113,7 +113,7 @@ function Projects() {
       <h2 className="text-3xl font-bold mb-8 text-center">Skol- och hobbyprojekt</h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
         {projectList.map((project, index) => (
-            <div key={index} className="p-6 border rounded-lg shadow" style={{ backgroundColor: '#FCFCF7' }}>
+            <div key={index} className="p-6 border rounded-lg shadow" style={{ backgroundColor: '#FCFCF7', color: '#003442' }}>
                 <h3 className="text-x1 font-semibold mb-2">{project.title}</h3>
                 <p className="text-grey-700">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mt-4">

@@ -3,7 +3,7 @@ import { FaPhone, FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa6";
 function Contact() {
     return(
         <div className="max-w-5xl mx-auto px-4 py-12">
-            <h2 className="text-4xl font-extrabold mb-12 text-center text-gray-900">
+            <h2 className="text-4xl font-extrabold mb-12 text-center">
                 Kontakta Mig
             </h2>
             
@@ -24,13 +24,13 @@ function Contact() {
                         <button 
                             type="submit" 
                             className="w-full p-3 text-white font-semibold rounded hover:bg-blue-800 transition-colors"
-                            style={{ backgroundColor: '#BFD8B8' }}>
+                            style={{ backgroundColor: '#F0E68C', color: '#003442' }}>
                             Skicka
                         </button>
                     </form>
                 </div>
-                <div className="p-8 border rounded-lg shadow-lg bg-white flex flex-col justify-center">
-                    <h3 className="text-xl font-semibold mb-6 text-center text-gray-700  pb-2">
+                <div className="p-8 border rounded-lg shadow-lg bg-white flex flex-col justify-center" style={{ color: '#003442'}}>
+                    <h3 className="text-xl font-semibold mb-6 text-center pb-2">
                         Kontaktuppgifter
                     </h3>
                     <p className="flex items-center justify-center mb-4 text-lg">
