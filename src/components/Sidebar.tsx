@@ -4,7 +4,8 @@ import { FaPhone, FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa6";
 function Sidebar() {
   return (
     <aside className="w-64 shadow-lg border-r
-        p-6 flex flex-col justify-between sticky top-0 h-screen" style={{ backgroundColor: '#F4F1EA', color: '#2F3E46' }}>
+        p-6 flex flex-col justify-between sticky top-0 h-screen" 
+        style={{ backgroundColor: '#C3E0E9', color: '#2F3E46', borderRightColor: '#F0E68C' }}>
       <div>
         <h1 className="text-xl font-bold mb-4">Lukas Rosendahl</h1>
         <p className="text-sm mb-6">
