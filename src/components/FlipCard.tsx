@@ -10,7 +10,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
 
   return (
     <div
-      onClick={() => setShowBack(prev => !prev)}
+      onClick={() => setShowBack((prev) => !prev)}
       style={{
         width: "600px",
         perspective: "1000px",
@@ -29,7 +29,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
       >
         <div
           style={{
-            position: "absolute", 
+            position: "absolute",
             inset: 0,
             backfaceVisibility: "hidden",
           }}
@@ -39,7 +39,7 @@ export default function FlipCard({ front, back }: FlipCardProps) {
 
         <div
           style={{
-            position: "absolute", 
+            position: "absolute",
             inset: 0,
             transform: "rotateY(180deg)",
             backfaceVisibility: "hidden",
@@ -51,4 +51,3 @@ export default function FlipCard({ front, back }: FlipCardProps) {
     </div>
   );
 }
-

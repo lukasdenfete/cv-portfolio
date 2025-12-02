@@ -1,11 +1,16 @@
 import React from "react";
 import ContactInfo from "./ContactInfo";
+import { COLORS } from "../Colors";
 
 function Sidebar() {
+  const AQUA_FOAM = COLORS.AQUA_FOAM;
+  const SUNLIGHT_GOLD = COLORS.SUNLIGHT_GOLD;
+  const SHADOW_NAVY = COLORS.SHADOW_NAVY;
+
   return (
     <aside className="w-64 shadow-lg border-r
         p-6 flex flex-col justify-between sticky top-0 h-screen" 
-        style={{ backgroundColor: '#C3E0E9', color: '#2F3E46', borderRightColor: '#F0E68C' }}>
+        style={{ backgroundColor: AQUA_FOAM , color: SHADOW_NAVY, borderRightColor: SUNLIGHT_GOLD }}>
       <div>
         <h1 className="text-xl font-bold mb-4">Lukas Rosendahl</h1>
         <p className="text-sm mb-6">
