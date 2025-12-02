@@ -12,8 +12,7 @@ import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
 import { ComponentType } from "react";
-import { ICON_COLORS } from "../Colors";
-import { COLORS } from "../Colors";
+import { COLORS, ICON_COLORS } from "../Colors";
 
 const TechBadge = ({
   Icon,
@@ -23,22 +22,24 @@ const TechBadge = ({
   Icon: ComponentType<{ size: number }>;
   name?: string;
   color: string;
-}) => (
-  <div
-    className={`flex items-center px-3 py-1 text-sm font-medium rounded-full transition-colors duration-150 ${
-      name ? "space-x-1" : ""
-    }`}
-    style={{
-      backgroundColor: `${color}22`,
-      color: color,
-      border: `1px solid ${color}`,
-    }}
-    title={name || "Teknikikon"}
-  >
-    <Icon size={25} />
-    {name && <span className="hidden sm:inline">{name}</span>}
-  </div>
-);
+}) => {
+  const isLight =
+    color === ICON_COLORS.JAVASCRIPT || color === ICON_COLORS.REACT;
+  const bgColor = isLight ? COLORS.SHADOW_NAVY : `${color}22`;
+  return (
+    <div
+      className="flex items-center px-3 py-1 text-sm font-medium rounded-lg transition-colors duration-150"
+      style={{
+        backgroundColor: bgColor,
+        color: color,
+        border: `1px solid ${color}`,
+      }}
+      title={name || "Teknikikon"}
+    >
+      <Icon size={25} />
+    </div>
+  );
+};
 
 function Projects() {
   const projectList = [
@@ -47,12 +48,16 @@ function Projects() {
       description:
         "Hobbyprojekt: en e-handelsplattform med communitydel. Byggd med ASP.NET Core MVC, C#, Entity Framework Core och databas i Azure, projektet kan även köras lokalt via SQL Server i Docker. Frontend är byggt med Razor Views och Bootstrap. Funktioner inkluderar användarhantering, följarsystem, DMs, trådar och kommentarer, notiser, produktsökning och varukorg.",
       badges: [
-        { Icon: SiDotnet, color: ICON_COLORS.DOTNET },
-        { Icon: SiCsharp, color: ICON_COLORS.CSHARP },
-        { Icon: DiBootstrap, color: ICON_COLORS.BOOTSTRAP },
-        { Icon: VscAzure, color: ICON_COLORS.AZURE },
-        { Icon: SiMicrosoftsqlserver, color: ICON_COLORS.SQLSERVER },
-        { Icon: SiDocker, color: ICON_COLORS.DOCKER },
+        { Icon: SiDotnet, name: ".NET", color: ICON_COLORS.DOTNET },
+        { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
+        { Icon: DiBootstrap, name: "Bootstrap", color: ICON_COLORS.BOOTSTRAP },
+        { Icon: VscAzure, name: "Azure", color: ICON_COLORS.AZURE },
+        {
+          Icon: SiMicrosoftsqlserver,
+          name: "Sql Server",
+          color: ICON_COLORS.SQLSERVER,
+        },
+        { Icon: SiDocker, name: "Docker", color: ICON_COLORS.DOCKER },
       ],
     },
     {
@@ -60,11 +65,15 @@ function Projects() {
       description:
         "Skolprojekt: en webbaserad CV-plattform byggd i ASP.NET MVC med Identity för autentisering. Systemet innehåller bland annat meddelanden med aviseringar, sökfunktioner, filuppladdning och export av profiler via serialization.",
       badges: [
-        { Icon: SiCsharp, color: ICON_COLORS.CSHARP },
-        { Icon: SiDotnet, color: ICON_COLORS.DOTNET },
-        { Icon: SiMicrosoftsqlserver, color: ICON_COLORS.SQLSERVER },
-        { Icon: SiDocker, color: ICON_COLORS.DOCKER },
-        { Icon: DiCss3, color: ICON_COLORS.CSS },
+        { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
+        { Icon: SiDotnet, name: ".NET", color: ICON_COLORS.DOTNET },
+        {
+          Icon: SiMicrosoftsqlserver,
+          name: "Sql Server",
+          color: ICON_COLORS.SQLSERVER,
+        },
+        { Icon: SiDocker, name: "Docker", color: ICON_COLORS.DOCKER },
+        { Icon: DiCss3, name: "CSS", color: ICON_COLORS.CSS },
       ],
     },
     {
@@ -72,8 +81,8 @@ function Projects() {
       description:
         "Skolprojekt: Ett affärssystem för en hattmakare utvecklat i Java med JForms och MySQL. Projektets huvudfokus låg på att arbeta enligt Scrum, använda krav från produktägare och omsätta dessa i fungerande design och implementation.",
       badges: [
-        { Icon: DiJava, color: ICON_COLORS.JAVA },
-        { Icon: DiMysql, color: ICON_COLORS.MYSQL },
+        { Icon: DiJava, name: "Java", color: ICON_COLORS.JAVA },
+        { Icon: DiMysql, name: "MySQL", color: ICON_COLORS.MYSQL },
       ],
     },
     {
@@ -81,10 +90,10 @@ function Projects() {
       description:
         "Skolprojekt: en responsiv webbplats för fiktivt företag. Projektet innehåller företagspresentation, personalsidor, kontaktsida med realtidsvalidering, bildspel, animerade skillbars samt ett projektgalleri där data läses från JSON och kan filtreras och sorteras i realtid.",
       badges: [
-        { Icon: FaHtml5, color: ICON_COLORS.HTML },
-        { Icon: FaCss3Alt, color: ICON_COLORS.CSS },
-        { Icon: SiJavascript, color: ICON_COLORS.JAVASCRIPT },
-        { Icon: FaVuejs, color: ICON_COLORS.VUEJS },
+        { Icon: FaHtml5, name: "HTML", color: ICON_COLORS.HTML },
+        { Icon: FaCss3Alt, name: "CSS", color: ICON_COLORS.CSS },
+        { Icon: SiJavascript, name: "JavaScript", color: ICON_COLORS.JAVASCRIPT },
+        { Icon: FaVuejs, name: "Vue.js", color: ICON_COLORS.VUEJS },
       ],
     },
     {
@@ -92,8 +101,8 @@ function Projects() {
       description:
         "Skolprojekt: en desktopapplikation för att hantera och organisera RSS-flöden. Asynkron hämtning av data, LINQ-hantering av samlingar samt strukturerad validering och exception-hantering. Utvecklad i .NET med Windows Forms.",
       badges: [
-        { Icon: SiCsharp, color: ICON_COLORS.CSHARP },
-        { Icon: SiDotnet, color: ICON_COLORS.DOTNET },
+        { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
+        { Icon: SiDotnet, name: ".NET", color: ICON_COLORS.DOTNET },
       ],
     },
     {
@@ -101,9 +110,10 @@ function Projects() {
       description:
         "Hobbyprojekt: Den här sidan är byggt i React med TypeScript och Tailwind CSS.",
       badges: [
-        { Icon: DiReact, color: ICON_COLORS.REACT },
-        { Icon: SiTailwindcss, color: ICON_COLORS.TAILWIND },
-        { Icon: SiTypescript, color: ICON_COLORS.TYPESCRIPT },
+        { Icon: DiReact, name: "React", color: ICON_COLORS.REACT },
+        { Icon: SiTailwindcss, name: "Tailwind", color: ICON_COLORS.TAILWIND },
+        { Icon: SiTypescript, name: "TypeScript", color: ICON_COLORS.TYPESCRIPT },
+        { Icon: SiJavascript, name: "Javascript", color: ICON_COLORS.JAVASCRIPT },
       ],
     },
     {
@@ -111,8 +121,8 @@ function Projects() {
       description:
         "Skolprojekt: ett Java-baserat administrations- och söksystem för MiB-agenter utvecklat i NetBeans. Systemet hanterade autentisering, rollstyrd åtkomst, registrering och uppdatering av agenter och aliens samt validerad datahantering och flera sök- och filtreringsfunktioner.",
       badges: [
-        { Icon: DiJava, color: ICON_COLORS.JAVA },
-        { Icon: DiMysql, color: ICON_COLORS.MYSQL },
+        { Icon: DiJava, name: "Java", color: ICON_COLORS.JAVA },
+        { Icon: DiMysql, name: "MySQL", color: ICON_COLORS.MYSQL },
       ],
     },
   ];
@@ -138,6 +148,7 @@ function Projects() {
                 <TechBadge
                   key={badgeIndex}
                   Icon={badge.Icon}
+                  name={badge.name}
                   color={badge.color}
                 />
               ))}
