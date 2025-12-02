@@ -1,4 +1,4 @@
-import { FaPhone, FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa6";
+import ContactInfo  from './ContactInfo';
 
 function Contact() {
     return(
@@ -36,29 +36,7 @@ function Contact() {
                     <h3 className="text-xl font-semibold mb-6 text-center pb-2">
                         Kontaktuppgifter
                     </h3>
-                    <p className="flex items-center justify-center mb-4 text-lg">
-                        <FaEnvelope size={24} className="mr-3 text-gray-600"/>
-                        <a href="mailto:lukas.rosendahl@hotmail.com" className="hover:underline">
-                            lukas.rosendahl@hotmail.com
-                        </a>
-                    </p>
-                    <p className="flex items-center justify-center mb-8 text-lg">
-                        <FaPhone size={24} className="mr-3 text-gray-600"/>
-                        070 260 60 44
-                    </p>
-                    <div className="flex justify-center space-x-2">
-                        <a target="_blank" href="https://www.linkedin.com/in/lukas-rosendahl-7380052aa/" 
-                            rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 transition-colors">
-                            <FaLinkedin size={36}/>
-                        </a>
-                        <a 
-                            target="_blank" 
-                            href="https://github.com/lukasdenfete" 
-                            rel="noopener noreferrer"
-                            className="text-gray-900 hover:text-gray-600 transition-colors">
-                            <FaGithub size={36}/>
-                        </a>
-                    </div>
+                    <ContactInfo iconSize={24} linkSize={36} />
                 </div>
             </div>
         </div>
