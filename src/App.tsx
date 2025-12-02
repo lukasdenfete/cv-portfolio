@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import CV from './components/CV';
 import { pdfjs } from 'react-pdf';
 import Sidebar from './components/Sidebar';
+import { COLORS } from './Colors';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -20,27 +21,20 @@ function App() {
         <Sidebar />
       </div>
       
-      <main className="flex-1" style={{ backgroundColor: '#007EA7', color: '#FFFACD' }} >
+      <main className="flex-1" style={{ backgroundColor: COLORS.POOL_BLUE, color: COLORS.ELLIS_BUTTER }} >
         <div className="md:hidden">
           <Header />
         </div>
-        <section id="about" className="min-h-screen flex items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 w-full">
-            <div className="flex items-center">
+        <section id="about" className="min-h-screen flex items-center justify-center p-8">
               <About />
-            </div>
-            <div className="flex items-center justify-center">
+        </section>
+        <section id="CV" className="min-h-screen flex items-center justify-center p-8 w-full">
               <CV />
-            </div>
-          </div>
         </section>
-        <section>
-          
-        </section>
-        <section id="projects" className="min-h-screen flex items-center ">
+        <section id="projects" className="min-h-screen flex items-center justify-center p-8">
           <Projects />
         </section>
-        <section id="contact" className="min-h-screen flex items-center ">
+        <section id="contact" className="min-h-screen flex items-center justify-center p-8">
           <Contact />
         </section>
       </main>

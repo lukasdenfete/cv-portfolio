@@ -27,7 +27,9 @@ export default function CV() {
   return (
     <>
       {!showFull && (
-        <div onClick={() => setShowFull(true)} className="cursor-pointer">
+        <div onClick={() => setShowFull(true)} className="cursor-pointer text-center">
+          <h2 className="text-4xl font-bold mb-4 text-center">CV</h2>
+          <p className="mb-8">Klicka för att öppna och snurra.</p>
           <Document file="/CV.pdf" onLoadSuccess={onDocumentLoaded}>
             <Page pageNumber={1} width={300} />
           </Document>

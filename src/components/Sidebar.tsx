@@ -14,10 +14,11 @@ function Sidebar() {
       <div>
         <h1 className="text-xl font-bold mb-4">Lukas Rosendahl</h1>
         <p className="text-sm mb-6">
-          Systemvetarstudent och fullstackutvecklare med 38 års erfarenhet
+          Systemvetarstudent
         </p>
         <nav className="flex flex-col gap-2">
           <a href="#about" className="transform transition-transform hover:scale-105">Om mig</a>
+          <a href="#CV" className="transform transition-transform hover:scale-105">CV</a>
           <a href="#projects" className="transform transition-transform hover:scale-105">Projekt</a>
           <a href="#contact" className="transform transition-transform hover:scale-105">Kontakt</a>
         </nav>

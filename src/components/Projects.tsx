@@ -128,7 +128,7 @@ function Projects() {
   ];
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold mb-8 text-center">
+      <h2 className="text-4xl font-bold mb-12 text-center">
         Skol- och hobbyprojekt
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
