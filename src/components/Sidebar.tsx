@@ -1,16 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import { COLORS } from "../Colors";
 
-function Sidebar() {
+const NavLink = ({
+  href,
+  text,
+  id,
+  handleScroll,
+}: {
+  href: string;
+  text: string;
+  id: string;
+  handleScroll: (e: React.MouseEvent<HTMLAnchorElement>, id: string) => void;
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleScroll = 
-    (e: React.MouseEvent<HTMLAnchorElement>,
-        targetId: string
-      ) =>  {
+  return (
+    <a
+      href={href}
+      onClick={(e) => handleScroll(e, id)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="block w-full py-3 px-4 rounded-lg font-medium transition-all duration-300"
+      style={{
+        color: COLORS.SHADOW_NAVY,
+        backgroundColor: isHovered ? "rgba(255, 255, 255, 0.6)" : "transparent",
+        paddingLeft: isHovered ? "1.5rem" : "1rem",
+      }}
+    >
+      {text}
+    </a>
+  );
+};
+
+function Sidebar() {
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    targetId: string
+  ) => {
     e.preventDefault();
 
-    if(targetId === "about") {
+    if (targetId === "about") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -22,7 +52,8 @@ function Sidebar() {
       let offsetTop = 0;
       let previousElement = element.previousElementSibling as HTMLElement;
 
-      while (previousElement) { //tryhardversion pga gick inte att scrolla uppåt till CV (knas med sticky?)
+      while (previousElement) {
+        //tryhardversion pga gick inte att scrolla uppåt till CV (knas med sticky?)
         offsetTop += previousElement.offsetHeight;
         previousElement = previousElement.previousElementSibling as HTMLElement;
       }
@@ -33,38 +64,69 @@ function Sidebar() {
     }
   };
 
-  const NavLink = ({href, text, id} : {href : string, text : string, id : string}) => (
-    <a href={href} onClick={(e) => handleScroll(e, id)}
-    className="block w-full py-3 px-4 rounded-lg transition-all duration-300 font-medium hover:bg-white/60 hover:pl-6"
-    style={{ color: COLORS.SHADOW_NAVY}}>
-      {text}
-    </a>
-  )
-
   return (
-    <aside className="w-64 shadow-2xl border-r
-        p-6 flex flex-col justify-between sticky top-0 h-screen" 
-        style={{ backgroundColor: COLORS.AQUA_FOAM , color: COLORS.SHADOW_NAVY, borderRightColor: COLORS.SUNLIGHT_GOLD, borderRightWidth: "4px" }}>
-      <div>
-        <h1 className="text-xl font-bold mb-4">Lukas Rosendahl</h1>
-        <p className="text-sm mb-6">
+    <aside
+      className="w-64 shadow-2xl border-r
+        p-6 flex flex-col justify-between sticky top-0 h-screen"
+      style={{
+        backgroundColor: COLORS.AQUA_FOAM,
+        color: COLORS.SHADOW_NAVY,
+        borderRightColor: COLORS.SUNLIGHT_GOLD,
+        borderRightWidth: "4px",
+      }}
+    >
+      <div className="flex flex-col items-center text-center">
+        <div className="mb-6 relative group">
+          <div
+            className="w-32 h-32 rounded-full overflow-hidden border-4 shadow-sm transition-transform duration-500 hover:scale-105"
+            style={{ borderColor: COLORS.SUNLIGHT_GOLD }}
+          >
+            <img
+              src="/logo192.png"
+              alt="Lukas Rosendahl"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <h1 className="text-2xl font-extrabold mb-1 tracking-tight">
+          Lukas Rosendahl
+        </h1>
+        <p
+          className="text-xs uppercase tracking-widest font-bold opacity-70 mb-10"
+          style={{ color: COLORS.SHADOW_NAVY }}
+        >
           Systemvetarstudent
         </p>
-        <nav className="flex flex-col gap-2">
-          <a href="#about" onClick={(e) => handleScroll(e, "about")}
-          className="transform transition-transform hover:scale-105">Om mig</a>
-          <a href="#CV" onClick={(e) => handleScroll(e, "CV")}
-          className="transform transition-transform hover:scale-105">CV</a>
-          <a href="#projects" onClick={(e) => handleScroll(e, "projects")}
-          className="transform transition-transform hover:scale-105">Projekt</a>
-          <a href="#contact" onClick={(e) => handleScroll(e, "contact")}
-          className="transform transition-transform hover:scale-105">Kontakt</a>
+
+        <nav className="w-full flex flex-col gap-1 text-left">
+          <NavLink
+            href="#about"
+            id="about"
+            text="Om mig"
+            handleScroll={handleScroll}
+          />
+          <NavLink href="#CV" id="CV" text="CV" handleScroll={handleScroll} />
+          <NavLink
+            href="#projects"
+            id="projects"
+            text="Projekt"
+            handleScroll={handleScroll}
+          />
+          <NavLink
+            href="#contact"
+            id="contact"
+            text="Kontakt"
+            handleScroll={handleScroll}
+          />
         </nav>
       </div>
 
-      <div className="flex flex-col items-center space-y-3 text-sm">
-        <ContactInfo iconSize={20} linkSize={22} />
-        <div className="text-xs text-gray-500 mt-4">© 2025 lukasdenfete</div>
+      <div className="flex flex-col items-center pt-6">
+        <ContactInfo iconSize={18} linkSize={24} />
+      </div>
+      <div className="flex flex-col opacity-60 mt-2 items-center text-sm">
+        © 2025 lukasdenfete
       </div>
     </aside>
   );
