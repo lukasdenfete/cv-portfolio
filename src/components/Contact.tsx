@@ -1,19 +1,20 @@
 import { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import { COLORS } from "../Colors";
+import AOS from 'aos';
 
 function Contact() {
   const [buttonHover, setButtonHover] = useState(false);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold mb-12 text-center">
+    <div className="max-w-5xl mx-auto px-4 py-12 overflow-hidden">
+      <h2 className="text-4xl font-bold mb-12 text-center" data-aos="fade-down" data-aos-duration="800">
         Kontakta Mig
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div
-          className="p-8 border rounded-lg shadow-lg bg-white"
+          className="p-8 border rounded-lg shadow-lg" data-aos="fade-right" data-aos-duration="1000"
           style={{ backgroundColor: COLORS.AQUA_FOAM }}
         >
           <h3 className="text-xl font-semibold mb-6 text-gray-700 text-center pb-2">
@@ -70,7 +71,8 @@ function Contact() {
           </form>
         </div>
         <div
-          className="p-8 border rounded-lg shadow-lg flex flex-col justify-center"
+          className="p-8 border rounded-lg shadow-lg flex flex-col justify-center" data-aos="fade-left"
+          data-aos-duration="1000"
           style={{
             backgroundColor: COLORS.AQUA_FOAM,
             color: COLORS.SHADOW_NAVY,

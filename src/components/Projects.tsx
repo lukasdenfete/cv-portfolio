@@ -11,8 +11,10 @@ import {
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
-import { ComponentType } from "react";
+import { ComponentType, useEffect } from "react";
 import { COLORS, ICON_COLORS } from "../Colors";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TechBadge = ({
   Icon,
@@ -42,6 +44,7 @@ const TechBadge = ({
 };
 
 function Projects() {
+
   const projectList = [
     {
       title: "Whiskey Sour Carparts",
@@ -128,7 +131,7 @@ function Projects() {
   ];
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold mb-12 text-center">
+      <h2 className="text-4xl font-bold mb-12 text-center" data-aos="fade-down">
         Skol- och hobbyprojekt
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
@@ -136,6 +139,7 @@ function Projects() {
           <div
             key={index}
             className="p-6 border rounded-lg shadow"
+            data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay={index * 150}
             style={{
               backgroundColor: COLORS.AQUA_FOAM,
               color: COLORS.SHADOW_NAVY,
