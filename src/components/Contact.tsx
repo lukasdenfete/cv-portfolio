@@ -13,8 +13,17 @@ function Contact() {
   const SERVICE_ID = "service_th0kz2j";
   const TEMPLATE_ID = "template_zx2i07k";
   const PUBLIC_KEY = "LtPUGefu5pFaIC8Yz";
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if(form.current) {
+    const formData = new FormData(form.current);
+    const emailValue = formData.get("from_email") as string;
+
+    if (!emailRegex.test(emailValue)) {
+      alert("Ogiltig e-postadress. Kontrollera att du skrivit rätt.");
+      return;
+    }
+
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then((result) => {
       console.log(result.text);
       alert("Ditt meddelande har skickats.");
