@@ -39,7 +39,7 @@ export default function CV() {
       {showFull && (
         <div
           ref={overlayRef}
-          className="fixed inset-0 bg-black bg-opacity-80 overflow-auto z-50"
+          className="fixed inset-0 md:left-64 bg-black bg-opacity-80 overflow-auto z-50"
         >
           <button
             className="fixed top-6 right-6 text-white hover:scale-125 transition-transform z-50"

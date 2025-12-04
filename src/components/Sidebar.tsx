@@ -82,8 +82,8 @@ function Sidebar() {
             style={{ borderColor: COLORS.SUNLIGHT_GOLD }}
           >
             <img
-              src="/logo192.png"
-              alt="Lukas Rosendahl"
+              src="/Profilbild.jpg"
+              alt="Profilbild"
               className="w-full h-full object-cover"
             />
           </div>
