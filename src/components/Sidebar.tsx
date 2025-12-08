@@ -82,7 +82,7 @@ function Sidebar() {
             style={{ borderColor: COLORS.SUNLIGHT_GOLD }}
           >
             <img
-              src="/Profilbild.JPG"
+              src="/Profilbild.jpg"
               alt="Profilbild"
               className="w-full h-full object-cover"
             />
