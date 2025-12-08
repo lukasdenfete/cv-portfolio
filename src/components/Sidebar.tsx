@@ -82,7 +82,7 @@ function Sidebar() {
             style={{ borderColor: COLORS.SUNLIGHT_GOLD }}
           >
             <img
-              src="/Profilbild.jpg"
+              src="/Profilbild.JPG"
               alt="Profilbild"
               className="w-full h-full object-cover"
             />
@@ -122,10 +122,10 @@ function Sidebar() {
         </nav>
       </div>
 
-      <div className="flex flex-col items-center pt-6">
+      <div className="flex flex-col items-center pt-10">
         <ContactInfo iconSize={18} linkSize={24} />
       </div>
-      <div className="flex flex-col opacity-60 mt-2 items-center text-sm">
+      <div className="flex flex-col opacity-60 mt-2 items-center text-xs">
         © 2025 lukasdenfete
       </div>
     </aside>

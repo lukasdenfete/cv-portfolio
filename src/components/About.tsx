@@ -2,7 +2,11 @@ function About() {
   return (
     <>
       <div className="max-w-4x1 text-lg mx-auto text-center px-4">
+        <h2 className="text-4xl font-bold mb-12 text-center">Välkommen till min CV-sida!</h2>
         <p>
+          Jag studerar sista året på systemvetenskapliga programmet vid Örebro Universitet. 
+          <br/>
+          <br/>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
           accusantium nam, id sequi suscipit modi corporis saepe harum
           necessitatibus dolore quidem voluptates repellendus consequatur nisi
