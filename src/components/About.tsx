@@ -4,33 +4,11 @@ function About() {
       <div className="max-w-4x1 text-lg mx-auto text-center px-4">
         <h2 className="text-4xl font-bold mb-12 text-center">Välkommen till min CV-sida!</h2>
         <p>
-          Jag studerar sista året på systemvetenskapliga programmet vid Örebro Universitet. 
-          <br/>
-          <br/>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
-          accusantium nam, id sequi suscipit modi corporis saepe harum
-          necessitatibus dolore quidem voluptates repellendus consequatur nisi
-          deleniti. Voluptatem labore quo eos? Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Tempora dolore nisi quam atque earum,
-          iste sapiente cum! Numquam eum voluptatibus a corrupti, distinctio
-          dolor fugiat voluptatum, perferendis nisi ex doloribus. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Magnam aut maxime
-          accusantium inventore consectetur tenetur impedit. Quo sit ipsum modi
-          odit cumque harum perferendis nulla at id? Nam, iure natus. Lorem
-          ipsum, dolor sit amet consectetur adipisicing elit. Iste nam nihil
-          autem porro minus architecto nulla sit, tenetur dolores? Dolores nisi
-          rerum harum quae debitis illo quibusdam dolor rem deleniti. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta
-          explicabo illo alias quaerat. Beatae quidem labore voluptate maxime
-          consequatur vero, perferendis nisi neque alias molestiae ullam
-          exercitationem doloremque nemo. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Vel temporibus reiciendis quod? Exercitationem
-          culpa, fugit qui eum earum, vel odit obcaecati nesciunt tempora
-          deleniti temporibus voluptate numquam consequuntur nulla excepturi.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          aspernatur, at nihil temporibus eius sunt quis quia eveniet quod odit
-          perspiciatis porro, dicta, consectetur ratione non reprehenderit natus
-          doloremque facilis?{" "}
+          Jag och studerar sista året på systemvetenskapliga programmet vid Örebro Universitet. 
+          Jag har under min utbildning utvecklat ett stort intresse för systemutveckling och cybersäkerhet. 
+          Scrolla ner för att kika på mitt CV och vilka olika projekt jag jobbat med i skolan och på fritiden, 
+          eller kontakta mig om du har några övriga frågor!
+          
         </p>
       </div>
     </>
