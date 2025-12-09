@@ -7,7 +7,7 @@ function About() {
           Jag och studerar sista året på systemvetenskapliga programmet vid Örebro Universitet. 
           Jag har under min utbildning utvecklat ett stort intresse för systemutveckling och cybersäkerhet. 
           Scrolla ner för att kika på mitt CV och vilka olika projekt jag jobbat med i skolan och på fritiden, 
-          eller kontakta mig om du har några övriga frågor!
+          eller kontakta mig om du har några frågor!
           
         </p>
       </div>
