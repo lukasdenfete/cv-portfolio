@@ -8,7 +8,7 @@ import BackCard from "../components/BackCard";
 import { RxCross1 } from "react-icons/rx";
 
 
-pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.mjs`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.mjs`;
 
 export default function CV() {
   const [numPages, setNumPages] = useState(0);
