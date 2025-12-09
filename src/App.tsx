@@ -25,7 +25,7 @@ function App() {
       className="flex min-h-screen"
       style={{ backgroundColor: COLORS.POOL_BLUE }}
     >
-      <div className="hidden md:block sticky top-0 z-50">
+      <div className="hidden md:block sticky top-0 h-screen z-50">
         <Sidebar />
       </div>
 
@@ -37,7 +37,7 @@ function App() {
         </div>
         <section
           id="about"
-          className="sticky top-0 min-h-screen flex items-center justify-center p-8"
+          className="min-h-screen flex items-center justify-center p-4 pt-24 md:p-8 md:sticky md:top-0"
           style={{
             backgroundColor: COLORS.POOL_BLUE,
             color: COLORS.ELLIS_BUTTER,
@@ -50,7 +50,7 @@ function App() {
         </section>
         <section
           id="CV"
-          className="sticky top-0 min-h-screen flex items-center justify-center p-8 w-full"
+          className="min-h-screen flex items-center justify-center p-4 md:p-8 w-full md:sticky md:top-0"
           style={{
             backgroundColor: COLORS.POOL_BLUE,
             color: COLORS.ELLIS_BUTTER,
@@ -63,7 +63,7 @@ function App() {
         </section>
         <section
           id="projects"
-          className="relative min-h-screen flex items-start justify-center p-8 py-20 w-full"
+          className="min-h-screen flex items-start justify-center p-4 py-20 md:p-8 w-full relative"
           style={{
             backgroundColor: COLORS.POOL_BLUE,
             color: COLORS.ELLIS_BUTTER,
@@ -74,7 +74,7 @@ function App() {
         </section>
         <section
           id="contact"
-          className="relative min-h-screen flex items-center justify-center p-8 w-full"
+          className="min-h-screen flex items-center justify-center p-4 md:p-8 w-full relative"
           style={{
             backgroundColor: COLORS.POOL_BLUE,
             color: COLORS.ELLIS_BUTTER,
