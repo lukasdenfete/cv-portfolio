@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar";
 import { COLORS } from "./Colors";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./components/ScrollToTop"
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -29,6 +30,7 @@ function App() {
         <Sidebar />
       </div>
       <div className="md:hidden">
+          <ScrollToTop />
           <Header />
         </div>
 

@@ -39,7 +39,7 @@ function Header() {
   return (
     <header
       className="fixed w-full top-0 shadow-md md:hidden"
-      style={{ backgroundColor: COLORS.AQUA_FOAM, color: COLORS.SHADOW_NAVY, zIndex: 60 }}
+      style={{ backgroundColor: COLORS.AQUA_FOAM, color: COLORS.SHADOW_NAVY, zIndex:60 }}
     >
       <div className="flex justify-between items-center p-4">
         <h1 className="text-xl font-bold tracking-tight">Lukas Rosendahl</h1>
@@ -66,7 +66,7 @@ function Header() {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleScroll(e, link.id)}
-                className="py-4 px-6 border-b border-black/5 font-medium hover:bg-white/40 transition-colors"
+                className="py-4 px-6 font-medium"
               >
                 {link.text}
               </a>
