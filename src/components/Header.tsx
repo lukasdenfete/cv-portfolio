@@ -20,7 +20,7 @@ function Header() {
     const element = document.getElementById(targetId);
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - 80; // -80px för att kompensera för headerns höjd
+      const offsetPosition = elementPosition + window.scrollY - 80; // headerns höjd
 
       window.scrollTo({
         top: offsetPosition,
@@ -38,8 +38,8 @@ function Header() {
 
   return (
     <header
-      className="fixed w-full top-0 shadow-md z-[60] md:hidden"
-      style={{ backgroundColor: COLORS.AQUA_FOAM, color: COLORS.SHADOW_NAVY }}
+      className="fixed w-full top-0 shadow-md md:hidden"
+      style={{ backgroundColor: COLORS.AQUA_FOAM, color: COLORS.SHADOW_NAVY, zIndex: 60 }}
     >
       <div className="flex justify-between items-center p-4">
         <h1 className="text-xl font-bold tracking-tight">Lukas Rosendahl</h1>

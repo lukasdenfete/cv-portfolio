@@ -111,7 +111,7 @@ function Projects() {
     {
       title: "CV-Portfolio",
       description:
-        "Hobbyprojekt: Den här sidan är byggt i React med TypeScript och Tailwind CSS.",
+        "Hobbyprojekt: Den här sidan är byggd i React med TypeScript och Tailwind CSS.",
       badges: [
         { Icon: DiReact, name: "React", color: ICON_COLORS.REACT },
         { Icon: SiTailwindcss, name: "Tailwind", color: ICON_COLORS.TAILWIND },

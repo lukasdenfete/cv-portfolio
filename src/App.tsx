@@ -28,13 +28,13 @@ function App() {
       <div className="hidden md:block sticky top-0 h-screen z-50">
         <Sidebar />
       </div>
+      <div className="md:hidden">
+          <Header />
+        </div>
 
       <main
         className="flex-1 relative"
       >
-        <div className="md:hidden">
-          <Header />
-        </div>
         <section
           id="about"
           className="min-h-screen flex items-center justify-center p-4 pt-24 md:p-8 md:sticky md:top-0"
