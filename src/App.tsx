@@ -10,7 +10,7 @@ import { COLORS } from "./Colors";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./components/ScrollToTop"
-import bgImage from "./images/bg-river.png";
+import bgImage from "./images/bg-balloons.png";
 import { RxBorderRight } from "react-icons/rx";
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -27,7 +27,6 @@ function App() {
     backgroundColor: "rgba(20, 20, 20, 0.6)",
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)", //safaristöd
-    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.3)",
   };
 
