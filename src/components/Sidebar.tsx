@@ -23,9 +23,10 @@ const NavLink = ({
       onMouseLeave={() => setIsHovered(false)}
       className="block w-full py-3 px-4 rounded-lg font-medium transition-all duration-300"
       style={{
-        color: COLORS.SHADOW_NAVY,
-        backgroundColor: isHovered ? "rgba(255, 255, 255, 0.6)" : "transparent",
+        color: COLORS.TEXT_LIGHT,
+        backgroundColor: isHovered ? COLORS.GLASS_HOVER : "transparent",
         paddingLeft: isHovered ? "1.5rem" : "1rem",
+        textShadow: COLORS.TEXT_SHADOW
       }}
     >
       {text}
@@ -69,17 +70,20 @@ function Sidebar() {
       className="w-64 shadow-2xl border-r
         p-6 flex flex-col justify-between sticky top-0 h-screen"
       style={{
-        backgroundColor: COLORS.AQUA_FOAM,
-        color: COLORS.SHADOW_NAVY,
-        borderRightColor: COLORS.SUNLIGHT_GOLD,
-        borderRightWidth: "4px",
+        backgroundColor: "rgba(15, 23, 42, 0.3)", 
+        
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        borderRightColor: COLORS.GLASS_BORDER,
+        borderRightWidth: "1px",
+        color: COLORS.TEXT_LIGHT
       }}
     >
       <div className="flex flex-col items-center text-center">
         <div className="mb-6 relative group">
           <div
             className="w-32 h-32 rounded-full overflow-hidden border-4 shadow-sm transition-transform duration-500 hover:scale-105"
-            style={{ borderColor: COLORS.SUNLIGHT_GOLD }}
+            style={{ borderColor: COLORS.GLASS_BORDER }}
           >
             <img
               src="/Profilbild.JPG"
@@ -94,7 +98,7 @@ function Sidebar() {
         </h1>
         <p
           className="text-xs uppercase tracking-widest font-bold opacity-70 mb-10"
-          style={{ color: COLORS.SHADOW_NAVY }}
+          style={{ color: COLORS.TEXT_MUTED, textShadow: COLORS.TEXT_SHADOW}}
         >
           Systemvetarstudent
         </p>

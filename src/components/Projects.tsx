@@ -25,16 +25,16 @@ const TechBadge = ({
   name?: string;
   color: string;
 }) => {
-  const isLight =
+ /* const isLight =
     color === ICON_COLORS.JAVASCRIPT || color === ICON_COLORS.REACT;
-  const bgColor = isLight ? COLORS.SHADOW_NAVY : `${color}22`;
+  const bgColor = isLight ? COLORS.SHADOW_NAVY : `${color}22`; */
   return (
     <div
       className="flex items-center px-3 py-1 text-sm font-medium rounded-lg transition-colors duration-150"
       style={{
-        backgroundColor: bgColor,
+        backgroundColor: `${color}20`,
         color: color,
-        border: `1px solid ${color}`,
+        border: `1px solid ${color}40`,
       }}
       title={name || "Teknikikon"}
     >
@@ -141,8 +141,10 @@ function Projects() {
             className="p-6 border rounded-lg shadow"
             data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay={index * 150}
             style={{
-              backgroundColor: COLORS.AQUA_FOAM,
-              color: COLORS.SHADOW_NAVY,
+              backgroundColor: COLORS.TEXT_SHADOW,
+              backdropFilter: "blur(5px)", // Extra blur inuti kortet
+              border: COLORS.GLASS_BORDER, 
+              color: COLORS.TEXT_LIGHT 
             }}
           >
             <h3 className="text-x1 font-semibold mb-2">{project.title}</h3>

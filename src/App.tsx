@@ -10,6 +10,8 @@ import { COLORS } from "./Colors";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./components/ScrollToTop"
+import bgImage from "./images/bg-river.png";
+import { RxBorderRight } from "react-icons/rx";
 
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -21,11 +23,26 @@ function App() {
     });
   }, []);
 
+  const glassStyle = {
+    backgroundColor: "rgba(20, 20, 20, 0.6)",
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)", //safaristöd
+    borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.3)",
+  };
+
+
   return (
     <div
       className="flex min-h-screen"
-      style={{ backgroundColor: COLORS.POOL_BLUE }}
     >
+      <div className="fixed inset-0 z-0" style={{ backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed", 
+        filter: " brightness(0.4)"
+      }} />
+
+      
+
       <div className="hidden md:block sticky top-0 h-screen z-50">
         <Sidebar />
       </div>
@@ -35,14 +52,13 @@ function App() {
         </div>
 
       <main
-        className="flex-1 relative"
+        className="flex-1 relative z-10"
       >
         <section
           id="about"
           className="min-h-screen flex items-center justify-center p-4 pt-24 md:p-8 md:sticky md:top-0"
           style={{
-            backgroundColor: COLORS.POOL_BLUE,
-            color: COLORS.ELLIS_BUTTER,
+            color: COLORS.TEXT_LIGHT,
             zIndex: 10,
           }}
         >
@@ -54,8 +70,9 @@ function App() {
           id="CV"
           className="min-h-screen flex items-center justify-center p-4 md:p-8 w-full md:sticky md:top-0"
           style={{
-            backgroundColor: COLORS.POOL_BLUE,
-            color: COLORS.ELLIS_BUTTER,
+            ...glassStyle,
+            color: COLORS.TEXT_LIGHT,
+            textShadow: COLORS.TEXT_SHADOW,
             zIndex: 20,
           }}
         >
@@ -67,8 +84,8 @@ function App() {
           id="projects"
           className="min-h-screen flex items-start justify-center p-4 py-20 md:p-8 w-full relative"
           style={{
-            backgroundColor: COLORS.POOL_BLUE,
-            color: COLORS.ELLIS_BUTTER,
+            ...glassStyle,
+            color: COLORS.TEXT_LIGHT,
             zIndex: 30,
           }}
         >
@@ -78,14 +95,13 @@ function App() {
           id="contact"
           className="min-h-screen flex items-center justify-center p-4 md:p-8 w-full relative"
           style={{
-            backgroundColor: COLORS.POOL_BLUE,
-            color: COLORS.ELLIS_BUTTER,
+            ...glassStyle,
+            color: COLORS.TEXT_LIGHT,
+            textShadow: COLORS.TEXT_SHADOW,
             zIndex: 40,
           }}
         >
-          <div>
             <Contact />
-          </div>
         </section>
       </main>
     </div>
