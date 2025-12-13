@@ -45,13 +45,12 @@ export default function CV() {
       {!showFull && (
         <div 
           onClick={() => setShowFull(true)} 
-          className="cursor-pointer text-center flex flex-col items-center transition-transform hover:scale-105"
+          className="cursor-pointer text-center flex flex-col items-center"
         >
           <h2 className="text-4xl font-bold mb-4 text-center">CV</h2>
           <p className="mb-8">Klicka för att öppna och snurra.</p>
           <div 
             className="shadow-lg rounded overflow-hidden"
-            style={{ border: "4px solid rgba(255, 255, 255, 0.1)" }}
           >
             <Document file="/CV.pdf">
               <Page 
@@ -74,7 +73,7 @@ export default function CV() {
           }}
         >
           <button
-            className="fixed top-6 right-8 text-white p-3 rounded-full hover:scale-110 transition-transform"
+            className="fixed top-6 right-8 p-3 rounded-full"
             style={{ 
                 zIndex: 71,
                 backgroundColor: "rgba(255,255,255,0.1)",

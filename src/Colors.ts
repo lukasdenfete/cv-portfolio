@@ -1,24 +1,16 @@
 export const COLORS = {
-  POOL_BLUE: "#007EA7", // Main background
-  AQUA_FOAM: "#C3E0E9", // Sidebar background/cards
-  CONCRETE_DECK: "#F4F1EA", //
-  SHADOW_NAVY: "#003442", // Sidebar text/footer
-  ELLIS_BUTTER: "#FFFACD", // Main text/headings
-  SUNLIGHT_GOLD: "#F0E68C", // Primary accent (buttons, links)
 
-  GLASS_BG_DARK: "rgba(15, 23, 42, 0.6)",      // Mörk bakgrundsplatta
-  GLASS_BORDER: "rgba(255, 255, 255, 0.1)",    // Tunn ljus kant
-  GLASS_HOVER: "rgba(255, 255, 255, 0.15)",    // Hover-effekt (ljusare än bakgrunden)
-  GLASS_CARD_BG: "rgba(255, 255, 255, 0.05)", // Svag vit ton för korten
+  GLASS_BG_DARK: "rgba(15, 23, 42, 0.6)",
+  GLASS_BORDER: "rgba(255, 255, 255, 0.1)",
+  GLASS_HOVER: "rgba(255, 255, 255, 0.15)",
+  GLASS_CARD_BG: "rgba(255, 255, 255, 0.05)",
 
-
-  TEXT_LIGHT: "#e2e8f0",                       // Huvudtext (Ljusgrå/Vit)
-  TEXT_MUTED: "#94a3b8",                       // Sekundär text (Lite mörkare grå)
-  TEXT_SHADOW: "0 1px 2px rgba(0,0,0,0.5)",    // Skuggning
-
+  TEXT_LIGHT: "#e2e8f0",
+  TEXT_MUTED: "#94a3b8",
+  TEXT_SHADOW: "0 1px 2px rgba(0,0,0,0.5)",
   INPUT_BG: "rgba(0, 0, 0, 0.3)",
   INPUT_TEXT: "#f1f5f9",
-  PLACEHOLDER_TEXT: "#9ca3af", // En ljusgrå nyans för placeholder
+  PLACEHOLDER_TEXT: "#9ca3af",
   
   BUTTON_GLASS: "rgba(255, 255, 255, 0.15)",
   BUTTON_GLASS_HOVER: "rgba(255, 255, 255, 0.3)",
