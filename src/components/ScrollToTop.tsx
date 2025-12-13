@@ -33,11 +33,15 @@ const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 p-3 rounded-full shadow-lg transition-transform hover:scale-110 active:scale-90 md:hidden z-50"
+      className="fixed bottom-6 right-6 p-3 rounded-full shadow-lg md:hidden z-50"
       style={{
-        backgroundColor: COLORS.AQUA_FOAM,
-        color: COLORS.SHADOW_NAVY,
-        border: `2px solid ${COLORS.SUNLIGHT_GOLD}`,
+        zIndex: 50,
+        backgroundColor: COLORS.BUTTON_GLASS,
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
+        border: COLORS.GLASS_BORDER,
+        color: COLORS.TEXT_LIGHT,
+        boxShadow: COLORS.TEXT_SHADOW
       }}
       aria-label="Till toppen"
     >

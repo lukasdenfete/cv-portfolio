@@ -36,17 +36,28 @@ function Header() {
     { id: "contact", text: "Kontakt" },
   ];
 
+  const headerGlassStyle: React.CSSProperties = {
+    backgroundColor: "rgba(15, 23, 42, 0.85)",
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+    borderBottom: `1px solid ${COLORS.GLASS_BORDER}`,
+    color: COLORS.TEXT_LIGHT,
+    zIndex: 60,
+  };
+
   return (
     <header
       className="fixed w-full top-0 shadow-md md:hidden"
-      style={{ backgroundColor: COLORS.AQUA_FOAM, color: COLORS.SHADOW_NAVY, zIndex:60 }}
+      style={ headerGlassStyle }
     >
       <div className="flex justify-between items-center p-4">
-        <h1 className="text-xl font-bold tracking-tight">Lukas Rosendahl</h1>
+        <h1 className="text-xl font-bold tracking-tight" style={{ textShadow: COLORS.TEXT_SHADOW}}>
+          Lukas Rosendahl</h1>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="p-2 focus:outline-none hover:bg-black/5 rounded-full transition-colors"
+          className="p-2 rounded-full transition-colors"
+          style={{ color: COLORS.TEXT_LIGHT}}
         >
           {isOpen ? <RxCross1 size={28} /> : <RxHamburgerMenu size={28} />}
         </button>
@@ -56,8 +67,10 @@ function Header() {
         <nav
           className="absolute top-full left-0 w-full shadow-lg border-t"
           style={{
-            backgroundColor: COLORS.AQUA_FOAM,
-            borderColor: COLORS.SUNLIGHT_GOLD,
+            backgroundColor: COLORS.GLASS_CARD_BG,
+            backdropFilter: "blur(16px)",
+            borderTopColor: COLORS.GLASS_BORDER,
+            borderBottom: `1px solid ${COLORS.GLASS_BORDER}`,
           }}
         >
           <div className="flex flex-col">
@@ -67,6 +80,7 @@ function Header() {
                 href={`#${link.id}`}
                 onClick={(e) => handleScroll(e, link.id)}
                 className="py-4 px-6 font-medium"
+                style={{ color: COLORS.TEXT_LIGHT }}
               >
                 {link.text}
               </a>
