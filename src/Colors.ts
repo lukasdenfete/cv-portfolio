@@ -9,10 +9,23 @@ export const COLORS = {
   GLASS_BG_DARK: "rgba(15, 23, 42, 0.6)",      // Mörk bakgrundsplatta
   GLASS_BORDER: "rgba(255, 255, 255, 0.1)",    // Tunn ljus kant
   GLASS_HOVER: "rgba(255, 255, 255, 0.15)",    // Hover-effekt (ljusare än bakgrunden)
-  
+  GLASS_CARD_BG: "rgba(255, 255, 255, 0.05)", // Svag vit ton för korten
+
+
   TEXT_LIGHT: "#e2e8f0",                       // Huvudtext (Ljusgrå/Vit)
   TEXT_MUTED: "#94a3b8",                       // Sekundär text (Lite mörkare grå)
   TEXT_SHADOW: "0 1px 2px rgba(0,0,0,0.5)",    // Skuggning
+
+  INPUT_BG: "rgba(0, 0, 0, 0.3)",
+  PLACEHOLDER_TEXT: "#9ca3af", // En ljusgrå nyans för placeholder
+  
+  
+  BUTTON_GLASS: "rgba(255, 255, 255, 0.15)",
+  BUTTON_GLASS_HOVER: "rgba(255, 255, 255, 0.3)",
+
+  LINKEDIN_BLUE: "#0077b5",
+  LINKEDIN_DARK: "#005582",
+  GITHUB_HOVER: "#94a3b8",
 };
 
 export const ICON_COLORS = {

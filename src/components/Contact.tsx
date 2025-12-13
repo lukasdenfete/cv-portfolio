@@ -48,7 +48,7 @@ function Contact() {
     backgroundColor: COLORS.TEXT_SHADOW,
     backdropFilter: "blur(10px)",
     WebkitBackdropFilter: "blur(10px)",
-    border: COLORS.GLASS_BORDER,
+    border: `1px solid ${COLORS.GLASS_BORDER}`,
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
   };
 
@@ -103,12 +103,11 @@ function Contact() {
               onMouseEnter={() => setButtonHover(true)}
               onMouseLeave={() => setButtonHover(false)}
               style={{
-                backgroundColor: buttonHover
-                  ? COLORS.GLASS_BORDER
-                  : COLORS.GLASS_HOVER,
-                border: COLORS.GLASS_BG_DARK,
-                color: "#ffffff",
+                backgroundColor: buttonHover ? COLORS.BUTTON_GLASS_HOVER : COLORS.BUTTON_GLASS,
+                border: `1px solid ${COLORS.GLASS_BORDER}`,
+                color: COLORS.TEXT_LIGHT,
                 backdropFilter: "blur(4px)",
+                cursor: "pointer"
               }}
             >
               Skicka
@@ -124,7 +123,7 @@ function Contact() {
           <h3 className="text-xl font-semibold mb-6 text-center pb-2">
             Kontaktuppgifter
           </h3>
-          <ContactInfo iconSize={24} linkSize={36} />
+          <ContactInfo iconSize={24} linkSize={28} />
         </div>
       </div>
     </div>

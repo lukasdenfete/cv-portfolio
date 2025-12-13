@@ -41,7 +41,7 @@ function ContactInfo({ iconSize = 18, linkSize = 22 }) {
 
       <p className="flex items-center justify-center">
         <FaPhone size={iconSize} className="mr-2 opacity-80" />
-        <span style={{ textShadow: COLORS.TEXT_SHADOW }}>070 260 60 44</span>
+        <span style={{ textShadow: COLORS.TEXT_SHADOW }}>070 - 260 60 44</span>
       </p>
 
       <div className="flex items-center justify-center gap-4 mt-2">
@@ -52,7 +52,7 @@ function ContactInfo({ iconSize = 18, linkSize = 22 }) {
           aria-label="LinkedIn"
           onMouseEnter={() => setLinkedinHover(true)}
           onMouseLeave={() => setLinkedinHover(false)}
-          style={getIconStyle(linkedinHover, "#0077b5", "#005582")}
+          style={getIconStyle(linkedinHover, COLORS.LINKEDIN_BLUE, COLORS.LINKEDIN_DARK)}
         >
           <FaLinkedin size={linkSize} />
         </a>
@@ -64,7 +64,7 @@ function ContactInfo({ iconSize = 18, linkSize = 22 }) {
           aria-label="GitHub"
           onMouseEnter={() => setGithubHover(true)}
           onMouseLeave={() => setGithubHover(false)}
-          style={getIconStyle(githubHover, COLORS.TEXT_LIGHT, "#94a3b8")}
+          style={getIconStyle(githubHover, COLORS.TEXT_LIGHT, COLORS.GITHUB_HOVER)}
         >
           <FaGithub size={linkSize} />
         </a>
