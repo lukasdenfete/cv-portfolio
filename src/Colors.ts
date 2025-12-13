@@ -17,6 +17,7 @@ export const COLORS = {
   TEXT_SHADOW: "0 1px 2px rgba(0,0,0,0.5)",    // Skuggning
 
   INPUT_BG: "rgba(0, 0, 0, 0.3)",
+  INPUT_TEXT: "#f1f5f9",
   PLACEHOLDER_TEXT: "#9ca3af", // En ljusgrå nyans för placeholder
   
   BUTTON_GLASS: "rgba(255, 255, 255, 0.15)",

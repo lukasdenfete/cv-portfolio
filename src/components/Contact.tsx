@@ -4,12 +4,20 @@ import { COLORS, ICON_COLORS } from "../Colors";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 
+type StatusType = { 
+  type: "success" | "error" | null;
+  message: string;
+};
+
 function Contact() {
   const [buttonHover, setButtonHover] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<StatusType>({ type: null, message: "" });
 
   const form = useRef<HTMLFormElement>(null);
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus({ type: null, message: "" });
     const SERVICE_ID = "service_th0kz2j";
     const TEMPLATE_ID = "template_zx2i07k";
     const PUBLIC_KEY = "LtPUGefu5pFaIC8Yz";
@@ -20,28 +28,45 @@ function Contact() {
       const emailValue = formData.get("from_email") as string;
 
       if (!emailRegex.test(emailValue)) {
-        alert("Ogiltig e-postadress. Kontrollera att du skrivit rätt.");
+        setStatus({
+          type: "error",
+          message: "Ogiltig e-postadress. Kontrollera stavningen.",
+        });
         return;
       }
+      setIsSending(true);
 
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         (result) => {
           console.log(result.text);
-          alert("Ditt meddelande har skickats.");
+          setStatus({
+            type: "success",
+            message: "Ditt meddelande har skickats."
+          });
+          
           (e.target as HTMLFormElement).reset();
+          setTimeout(() => {
+            setStatus({ type: null, message: ""});
+          }, 5000); // visa meddelande i 5 sek
+
         },
         (error) => {
           console.log(error.text);
-          alert("Något gick fel. Försök igen senare.");
+          setStatus({
+            type: "error",
+            message: "Ett fel inträffade. Försök igen senare."
+          });
         }
-      );
+      ).finally(() => { //lås upp knappen oavsett
+        setIsSending(false);
+      });
     }
   };
 
   const inputStyle = {
-    backgroundColor: "rgba(0, 0, 0, 0.3)",
-    color: "#f1f5f9",
-    borderColor: COLORS.GLASS_BORDER,
+    backgroundColor: COLORS.INPUT_BG,
+    color: COLORS.INPUT_TEXT,
+    borderColor: `1px solid ${COLORS.GLASS_BORDER}`,
   };
 
   const cardStyle = {
@@ -80,6 +105,7 @@ function Contact() {
               className="w-full p-3 border rounded"
               style={inputStyle}
               required
+              disabled={isSending}
             />
             <input
               type="email"
@@ -88,6 +114,7 @@ function Contact() {
               className="w-full p-3 border rounded"
               style={inputStyle}
               required
+              disabled={isSending}
             />
             <textarea
               name="message"
@@ -96,11 +123,25 @@ function Contact() {
               className="w-full p-3 border rounded"
               style={inputStyle}
               required
+              disabled={isSending}
             ></textarea>
+            {status.message && (
+              <div 
+                className={`p-3 rounded text-center text-sm font-medium transition-all duration-300 ${
+                  status.type === 'success' 
+                    ? 'bg-green-500/20 text-green-100 border border-green-500/30' 
+                    : 'bg-red-500/20 text-red-100 border border-red-500/30'
+                }`}
+              >
+                {status.message}
+              </div>
+            )}
+
             <button
               type="submit"
+              disabled={isSending}
               className="w-full p-3 font-semibold rounded"
-              onMouseEnter={() => setButtonHover(true)}
+              onMouseEnter={() => !isSending && setButtonHover(true)}
               onMouseLeave={() => setButtonHover(false)}
               style={{
                 backgroundColor: buttonHover ? COLORS.BUTTON_GLASS_HOVER : COLORS.BUTTON_GLASS,
@@ -110,7 +151,7 @@ function Contact() {
                 cursor: "pointer"
               }}
             >
-              Skicka
+              {isSending ? "Skickar.." : "Skicka"}
             </button>
           </form>
         </div>
