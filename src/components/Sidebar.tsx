@@ -70,7 +70,7 @@ function Sidebar() {
       className="w-64 shadow-2xl border-r
         p-6 flex flex-col justify-between sticky top-0 h-screen"
       style={{
-        backgroundColor: "rgba(15, 23, 42, 0.3)", 
+        backgroundColor: COLORS.INPUT_BG, 
         
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",

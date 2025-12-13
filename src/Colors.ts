@@ -19,7 +19,6 @@ export const COLORS = {
   INPUT_BG: "rgba(0, 0, 0, 0.3)",
   PLACEHOLDER_TEXT: "#9ca3af", // En ljusgrå nyans för placeholder
   
-  
   BUTTON_GLASS: "rgba(255, 255, 255, 0.15)",
   BUTTON_GLASS_HOVER: "rgba(255, 255, 255, 0.3)",
 

@@ -9,11 +9,12 @@ import Sidebar from "./components/Sidebar";
 import { COLORS } from "./Colors";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ScrollToTop from "./components/ScrollToTop"
+import ScrollToTop from "./components/ScrollToTop";
 import bgImage from "./images/bg-balloons.png";
 import { RxBorderRight } from "react-icons/rx";
 
-pdfjs.GlobalWorkerOptions.workerSrc = pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc =
+  pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function App() {
   useEffect(() => {
@@ -24,35 +25,34 @@ function App() {
   }, []);
 
   const glassStyle = {
-    backgroundColor: "rgba(20, 20, 20, 0.6)",
+    backgroundColor: "rgba(20, 20, 20, 0.5)",
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)", //safaristöd
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.3)",
   };
 
-
   return (
-    <div
-      className="flex min-h-screen"
-    >
-      <div className="fixed inset-0 z-0" style={{ backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed", 
-        filter: " brightness(0.4)"
-      }} />
-
-      
+    <div className="flex min-h-screen">
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          filter: " brightness(0.4)",
+        }}
+      />
 
       <div className="hidden md:block sticky top-0 h-screen z-50">
         <Sidebar />
       </div>
       <div className="md:hidden">
-          <ScrollToTop />
-          <Header />
-        </div>
+        <ScrollToTop />
+        <Header />
+      </div>
 
-      <main
-        className="flex-1 relative z-10"
-      >
+      <main className="flex-1 relative z-10">
         <section
           id="about"
           className="min-h-screen flex items-center justify-center p-4 pt-24 md:p-8 md:sticky md:top-0"
@@ -100,7 +100,7 @@ function App() {
             zIndex: 40,
           }}
         >
-            <Contact />
+          <Contact />
         </section>
       </main>
     </div>
