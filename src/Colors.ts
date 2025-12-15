@@ -4,6 +4,8 @@ export const COLORS = {
   GLASS_BORDER: "rgba(255, 255, 255, 0.1)",
   GLASS_HOVER: "rgba(255, 255, 255, 0.15)",
   GLASS_CARD_BG: "rgba(255, 255, 255, 0.05)",
+  BUTTON_GLASS_HOVER: "rgba(255, 255, 255, 0.3)",
+  HEADER_BG: "rgba(15, 23, 42, 0.85)",
 
   TEXT_LIGHT: "#e2e8f0",
   TEXT_MUTED: "#94a3b8",
@@ -12,8 +14,6 @@ export const COLORS = {
   INPUT_TEXT: "#f1f5f9",
   PLACEHOLDER_TEXT: "#9ca3af",
   
-  BUTTON_GLASS: "rgba(255, 255, 255, 0.15)",
-  BUTTON_GLASS_HOVER: "rgba(255, 255, 255, 0.3)",
 
   LINKEDIN_BLUE: "#0077b5",
   LINKEDIN_DARK: "#005582",

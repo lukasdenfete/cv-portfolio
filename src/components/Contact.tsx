@@ -144,7 +144,7 @@ function Contact() {
               onMouseEnter={() => !isSending && setButtonHover(true)}
               onMouseLeave={() => setButtonHover(false)}
               style={{
-                backgroundColor: buttonHover ? COLORS.BUTTON_GLASS_HOVER : COLORS.BUTTON_GLASS,
+                backgroundColor: buttonHover ? COLORS.BUTTON_GLASS_HOVER : COLORS.GLASS_HOVER,
                 border: `1px solid ${COLORS.GLASS_BORDER}`,
                 color: COLORS.TEXT_LIGHT,
                 backdropFilter: "blur(4px)",

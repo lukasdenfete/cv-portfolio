@@ -76,8 +76,8 @@ export default function CV() {
             className="fixed top-6 right-8 p-3 rounded-full"
             style={{ 
                 zIndex: 71,
-                backgroundColor: "rgba(255,255,255,0.1)",
-                border: "1px solid rgba(255,255,255,0.2)"
+                backgroundColor: COLORS.GLASS_HOVER,
+                border: `1px solid ${COLORS.BUTTON_GLASS_HOVER}`
             }}
             onClick={() => setShowFull(false)}
           >

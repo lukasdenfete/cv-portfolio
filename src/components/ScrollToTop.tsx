@@ -36,7 +36,7 @@ const ScrollToTop = () => {
       className="fixed bottom-6 right-6 p-3 rounded-full shadow-lg md:hidden z-50"
       style={{
         zIndex: 50,
-        backgroundColor: COLORS.BUTTON_GLASS,
+        backgroundColor: COLORS.GLASS_HOVER,
         backdropFilter: "blur(8px)",
         WebkitBackdropFilter: "blur(8px)",
         border: COLORS.GLASS_BORDER,

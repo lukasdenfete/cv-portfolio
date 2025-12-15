@@ -37,7 +37,7 @@ function Header() {
   ];
 
   const headerGlassStyle: React.CSSProperties = {
-    backgroundColor: "rgba(15, 23, 42, 0.85)",
+    backgroundColor: COLORS.HEADER_BG,
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)",
     borderBottom: `1px solid ${COLORS.GLASS_BORDER}`,
