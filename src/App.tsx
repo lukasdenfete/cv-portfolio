@@ -11,7 +11,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./components/ScrollToTop";
 import bgImage from "./images/bg-balloons.png";
-import { RxBorderRight } from "react-icons/rx";
 
 pdfjs.GlobalWorkerOptions.workerSrc =
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;

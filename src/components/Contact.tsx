@@ -1,8 +1,7 @@
 import { useState, useRef } from "react";
 import ContactInfo from "./ContactInfo";
-import { COLORS, ICON_COLORS } from "../Colors";
+import { COLORS } from "../Colors";
 import emailjs from "@emailjs/browser";
-import AOS from "aos";
 
 type StatusType = { 
   type: "success" | "error" | null;

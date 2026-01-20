@@ -11,9 +11,8 @@ import {
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa6";
 import { VscAzure } from "react-icons/vsc";
-import { ComponentType, useEffect } from "react";
+import { ComponentType } from "react";
 import { COLORS, ICON_COLORS } from "../Colors";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const TechBadge = ({
