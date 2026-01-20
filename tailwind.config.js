@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
+      fontFamily: {
+       // sans: ['"JetBrains Mono"', 'monospace'],
+      },
       colors: {
         
       },
