@@ -51,6 +51,7 @@
   "devDependencies": {
     "@types/aos": "^3.0.7",
     "autoprefixer": "^9.8.8",
+    "baseline-browser-mapping": "^2.9.16",
     "clsx": "^2.1.1",
     "postcss": "^7.0.39",
     "tailwind-merge": "^3.4.0",
