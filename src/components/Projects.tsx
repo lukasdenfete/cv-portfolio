@@ -7,6 +7,7 @@ import {
   SiCsharp,
   SiMicrosoftsqlserver,
   SiDocker,
+  SiNeo4J,
 } from "react-icons/si";
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa6";
@@ -41,6 +42,17 @@ const TechBadge = ({
 };
 
 const projectList = [
+  {
+      title: "Movie Graph Chat",
+      description:
+        "Hobbyprojekt: En konsolapplikation som använder GraphRAG genom att koppla en LLM till en Neo4j-databas. Systemet låter användaren chatta med en grafdatabas genom att översätta naturligt språk till exakta Cypher-frågor (via Semantic Kernel) och generera svar baserat på sökresultaten.",
+      badges: [
+        { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
+        { Icon: SiDotnet, name: "Semantic Kernel", color: ICON_COLORS.DOTNET },
+        { Icon: SiNeo4J, name: "Neo4j", color: ICON_COLORS.NEO4J },
+        { Icon: SiDocker, name: "Docker", color: ICON_COLORS.DOCKER },
+      ],
+  },
   {
     title: "Whiskey Sour Carparts",
     description:

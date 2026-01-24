@@ -36,4 +36,5 @@ export const ICON_COLORS = {
   CSHARP: "#239120",
   SQLSERVER: "#CC2927",
   DOCKER: "#2496ED",
+  NEO4J: "#008CC1"
 };
