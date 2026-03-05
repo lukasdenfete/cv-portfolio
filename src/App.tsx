@@ -11,6 +11,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollToTop from "./components/ScrollToTop";
 import bgImage from "./images/bg-balloons.png";
+import { Analytics } from "@vercel/analytics/react";
 
 pdfjs.GlobalWorkerOptions.workerSrc =
   pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen">
+      <Analytics />
       <div
         className="fixed inset-0 z-0"
         style={{

@@ -8,6 +8,7 @@ import {
   SiMicrosoftsqlserver,
   SiDocker,
   SiNeo4J,
+  SiOpenai,
 } from "react-icons/si";
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa6";
@@ -43,15 +44,15 @@ const TechBadge = ({
 
 const projectList = [
   {
-      title: "Movie Graph Chat",
-      description:
-        "Hobbyprojekt: En konsolapplikation som använder GraphRAG genom att koppla en LLM till en Neo4j-databas. Systemet låter användaren chatta med en grafdatabas genom att översätta naturligt språk till exakta Cypher-frågor (via Semantic Kernel) och generera svar baserat på sökresultaten.",
-      badges: [
-        { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
-        { Icon: SiDotnet, name: "Semantic Kernel", color: ICON_COLORS.DOTNET },
-        { Icon: SiNeo4J, name: "Neo4j", color: ICON_COLORS.NEO4J },
-        { Icon: SiDocker, name: "Docker", color: ICON_COLORS.DOCKER },
-      ],
+
+    title: "LLM-komponent för mjukvarustyrning",
+    description: "Examensprojekt: Utveckling av en agentbaserad WPF-applikation i .NET 8 som gör det möjligt att styra mjukvara med naturligt språk via LLM. Systemet använder Semantic Kernel för beslutsträd och tool calls, samt en egen MCP-server som kommunicerar via named pipes och JSON-RPC.",
+    badges: [
+      { Icon: SiDotnet, name: ".NET 8", color: ICON_COLORS.DOTNET },
+      { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
+      { Icon: SiOpenai, name: "LLM", color: COLORS.TEXT_LIGHT }
+    ],
+
   },
   {
     title: "Whiskey Sour Carparts",
@@ -70,6 +71,17 @@ const projectList = [
       { Icon: SiDocker, name: "Docker", color: ICON_COLORS.DOCKER },
     ],
   },
+  {
+    title: "Movie Graph Chat",
+    description:
+      "Hobbyprojekt: En konsolapplikation som använder GraphRAG genom att koppla en LLM till en Neo4j-databas. Systemet låter användaren chatta med en grafdatabas genom att översätta naturligt språk till exakta Cypher-frågor (via Semantic Kernel) och generera svar baserat på sökresultaten.",
+    badges: [
+      { Icon: SiCsharp, name: "C#", color: ICON_COLORS.CSHARP },
+      { Icon: SiDotnet, name: "Semantic Kernel", color: ICON_COLORS.DOTNET },
+      { Icon: SiNeo4J, name: "Neo4j", color: ICON_COLORS.NEO4J },
+      { Icon: SiDocker, name: "Docker", color: ICON_COLORS.DOCKER },
+    ],
+},
   {
     title: "CV-projektet",
     description:

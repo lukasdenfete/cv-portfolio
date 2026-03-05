@@ -100,7 +100,7 @@ function Sidebar() {
           className="text-xs uppercase tracking-widest font-bold opacity-70 mb-10"
           style={{ color: COLORS.TEXT_MUTED, textShadow: COLORS.TEXT_SHADOW}}
         >
-          Systemvetarstudent
+          Systemvetare
         </p>
 
         <nav className="w-full flex flex-col gap-1 text-left">
