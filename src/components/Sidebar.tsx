@@ -21,7 +21,7 @@ const NavLink = ({
       onClick={(e) => handleScroll(e, id)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="block w-full py-3 px-4 rounded-lg font-medium transition-all duration-300"
+      className="block w-full py-2 px-4 rounded-lg font-medium transition-all duration-300"
       style={{
         color: COLORS.TEXT_LIGHT,
         backgroundColor: isHovered ? COLORS.GLASS_HOVER : "transparent",
@@ -82,7 +82,7 @@ function Sidebar() {
       <div className="flex flex-col items-center text-center">
         <div className="mb-6 relative group">
           <div
-            className="w-32 h-32 rounded-full overflow-hidden border-4 shadow-sm transition-transform duration-500 hover:scale-105"
+            className="w-24 h-24 rounded-full overflow-hidden border-4 shadow-sm transition-transform duration-500 hover:scale-105"
             style={{ borderColor: COLORS.GLASS_BORDER }}
           >
             <img
@@ -97,7 +97,7 @@ function Sidebar() {
           Lukas Rosendahl
         </h1>
         <p
-          className="text-xs uppercase tracking-widest font-bold opacity-70 mb-10"
+          className="text-xs uppercase tracking-widest font-bold opacity-70 mb-6"
           style={{ color: COLORS.TEXT_MUTED, textShadow: COLORS.TEXT_SHADOW}}
         >
           Systemvetare
@@ -126,7 +126,7 @@ function Sidebar() {
         </nav>
       </div>
 
-      <div className="flex flex-col items-center pt-10">
+      <div className="flex flex-col items-center pt-6">
         <ContactInfo iconSize={18} linkSize={24} />
       </div>
       <div className="flex flex-col opacity-60 mt-2 items-center text-xs">
