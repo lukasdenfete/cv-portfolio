@@ -67,7 +67,7 @@ function Header() {
         <nav
           className="absolute top-full left-0 w-full shadow-lg border-t"
           style={{
-            backgroundColor: COLORS.GLASS_CARD_BG,
+            backgroundColor: "rgba(10, 15, 30, 0.97)",
             backdropFilter: "blur(16px)",
             borderTopColor: COLORS.GLASS_BORDER,
             borderBottom: `1px solid ${COLORS.GLASS_BORDER}`,

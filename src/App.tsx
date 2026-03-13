@@ -35,12 +35,11 @@ function App() {
     <div className="flex min-h-screen">
       <Analytics />
       <div
-        className="fixed inset-0 z-0"
+        className="fixed inset-0 z-0 bg-hero"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",
           filter: " brightness(0.4)",
         }}
       />
